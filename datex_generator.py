@@ -23,7 +23,7 @@ from lxml import etree
 import sys
 
 API_URL     = "https://kozut.bkkinfo.hu/api/changes"
-OUTPUT_BASE = "Datex"
+OUTPUT_BASE = "Datex_allomanyok"
 
 COUNTRY             = "hu"
 NATIONAL_IDENTIFIER = "HU"
