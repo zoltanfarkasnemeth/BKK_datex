@@ -136,7 +136,7 @@ def build_v23(records):
         etree.SubElement(sit_rec, f"{{{NS}}}situationRecordCreationTime").text = now_iso()
         etree.SubElement(sit_rec, f"{{{NS}}}situationRecordVersionTime").text = now_iso()
         etree.SubElement(sit_rec, f"{{{NS}}}probabilityOfOccurrence").text = "certain"
-        etree.SubElement(sit_rec, f"{{{NS}}}severity").text = "high" if rec.get("priority", 0) > 0 else "low"
+        etree.SubElement(sit_rec, f"{{{NS}}}severity").text = "high" if (rec.get("priority") or 0) > 0 else "low"
         etree.SubElement(sit_rec, f"{{{NS}}}source").text = PUBLISHER_NAME
 
         # Validity
@@ -357,7 +357,7 @@ def build_v35(records):
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}creationTime").text = format_date(rec.get("start_date")) or now_iso()
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}versionTime").text = now_iso()
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}probabilityOfOccurrence").text = "certain"
-        etree.SubElement(sit_rec, f"{{{NS_SIT}}}severity").text = "high" if rec.get("priority", 0) > 0 else "low"
+        etree.SubElement(sit_rec, f"{{{NS_SIT}}}severity").text = "high" if (rec.get("priority") or 0) > 0 else "low"
 
         validity = etree.SubElement(sit_rec, f"{{{NS_SIT}}}validity")
         etree.SubElement(validity, f"{{{NS_SIT}}}validityStatus").text = (
