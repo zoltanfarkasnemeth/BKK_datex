@@ -5,14 +5,24 @@ Verzió: 2.3, 3.2, 3.5
 Forrás: https://kozut.bkkinfo.hu/api/changes
 Futtatás: GitHub Actions, 5 percenként
 
-Javítások (v2):
-  - Időbélyeg-konzisztencia: creationTime = start_date (API), versionTime = pub_time
-  - situationVersionTime = pub_time (nem later mint creationTime)
-  - situationRecordExtension → standard _extension mechanizmus (BKK namespace)
-  - accidentType mező hozzáadva (causes.code alapján)
-  - headerInformation blokk hozzáadva (confidentiality, informationStatus)
-  - priority None-safe összehasonlítás
-  - Kimeneti mappa: Datex/
+Javítások (v3) - validáció alapján feltárt hibák:
+  [FIX-T1]  publicationTime = pub_time (generálás pillanata), SOHA nem korábbi cache-elt érték
+             → creationTime / versionTime / situationVersionTime mind <= pub_time kell legyen
+             → ha az API start_date jövőbeli lenne, pub_time-ra clampeljük
+  [FIX-T2]  versionTime = max(creation_time, pub_time) helyett:
+             versionTime = pub_time (a rekord legutóbbi publikálásakor érvényes verzióidő)
+             situationVersionTime = pub_time (konzisztens a versionTime-mal)
+  [FIX-O1]  <cause> MINDIG az <_extension> ELÖTT generálódik (2.x és 3.x XSD sequence)
+  [FIX-C1]  <sit:causeType> ELTÁVOLÍTVA build_v32-ből és build_v35-ből:
+             nem standard DATEX II elem (sem 3.2, sem 3.5 Cause osztályban nem szerepel)
+             → csak causeDescription marad
+  [FIX-V1]  validityStatus: end_date esetén "suspended" helyett "active" + overallEndTime
+             (suspended = ideiglenesen szünetelő, nem = tervezett befejezésű aktív esemény)
+  [FIX-L1]  DATEX II 3.2: loc:pointByCoordinates alatt NINCS loc:pointCoordinates burokelem
+             → közvetlen loc:latitude + loc:longitude a pointByCoordinates alatt
+  [FIX-A1]  ACCIDENT_TYPE_MAP: "roadClosed" és "obstacleOnRoad" nem érvényes accidentType enum
+             → csak az Accident osztály érvényes értékeit használjuk
+  [FIX-S1]  get_severity: priority=None safe + medium szint hozzáadva
 """
 
 import requests
@@ -30,17 +40,22 @@ NATIONAL_IDENTIFIER = "HU"
 PUBLISHER_ID        = "BKK"
 PUBLISHER_NAME      = "Budapest Közút Zrt."
 
-# BKK extension namespace (saját, nem standard mezőkhöz)
 NS_BKK = "http://bkkinfo.hu/datex2/extension/1_0"
 
-# cause kód → DATEX II accidentType mapping
+# [FIX-A1] Csak érvényes DATEX II Accident xsi:type enum értékek:
+# accident | collision | overturnedVehicle | jackknifedArticulatedLorry |
+# damagedVehicle | vehicleOnFire | multipleVehicleAccident | other
 ACCIDENT_TYPE_MAP = {
-    "baleset":              "collision",
-    "torlodas":             "collision",
-    "lezaras":              "roadClosed",
-    "utlezaras":            "roadClosed",
-    "forgalomkorlatozas":   "obstacleOnRoad",
-    "akadaly":              "obstacleOnRoad",
+    "baleset":            "collision",
+    "torlodas":           "accident",
+    "lezaras":            "accident",
+    "utlezaras":          "accident",
+    "forgalomkorlatozas": "accident",
+    "akadaly":            "accident",
+    "utkozos":            "collision",
+    "felborulas":         "overturnedVehicle",
+    "tuzesets":           "vehicleOnFire",
+    "tomegbaleset":       "multipleVehicleAccident",
 }
 ACCIDENT_TYPE_DEFAULT = "accident"
 
@@ -50,7 +65,6 @@ ACCIDENT_TYPE_DEFAULT = "accident"
 # ──────────────────────────────────────────────
 
 def fetch_data():
-    """API lekérés"""
     try:
         resp = requests.get(API_URL, timeout=30)
         resp.raise_for_status()
@@ -67,7 +81,6 @@ def fetch_data():
 
 
 def parse_coordinates(coord_str):
-    """'[\"47.506444,19.151243\"]' -> (lat, lon)"""
     try:
         coords = json.loads(coord_str) if isinstance(coord_str, str) else coord_str
         if isinstance(coords, list) and coords:
@@ -80,12 +93,10 @@ def parse_coordinates(coord_str):
 
 
 def now_iso():
-    """Aktuális UTC idő ISO 8601 formátumban"""
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def format_date(dt_str):
-    """API dátum string -> ISO 8601"""
     if not dt_str:
         return None
     try:
@@ -96,33 +107,64 @@ def format_date(dt_str):
 
 
 def get_accident_type(rec):
-    """cause code alapján DATEX II accidentType értéke"""
     for cause in rec.get("causes", []):
-        code = (cause.get("code") or "").lower().replace(" ", "").replace("á", "a").replace("ú", "u")
-        if code in ACCIDENT_TYPE_MAP:
-            return ACCIDENT_TYPE_MAP[code]
+        code = (cause.get("code") or "").lower().strip()
+        # Normalizálás: ékezetek és szóközök eltávolítása
+        code_norm = (code.replace("á","a").replace("é","e").replace("í","i")
+                        .replace("ó","o").replace("ö","o").replace("ő","o")
+                        .replace("ú","u").replace("ü","u").replace("ű","u")
+                        .replace(" ",""))
+        if code_norm in ACCIDENT_TYPE_MAP:
+            return ACCIDENT_TYPE_MAP[code_norm]
     return ACCIDENT_TYPE_DEFAULT
 
 
-def max_time(t1_iso, t2_iso):
-    """Visszaadja a két ISO timestamp közül a késõbbit (versionTime >= creationTime garantáláshoz)"""
+# [FIX-T1] creation_time clamp: ha az API jövőbeli időt adna vissza,
+# pub_time-ra rögzítjük → creationTime sosem lehet jövőbeli a publikációhoz képest
+def safe_creation_time(start_date_str, pub_time):
+    """
+    Visszaad egy ISO timestamp-et, ami garantáltan <= pub_time.
+    Ha az API start_date jövőbeli lenne (pl. szinkronizációs hiba),
+    pub_time-t adjuk vissza.
+    """
+    ct = format_date(start_date_str) or pub_time
     try:
-        dt1 = datetime.strptime(t1_iso, "%Y-%m-%dT%H:%M:%SZ")
-        dt2 = datetime.strptime(t2_iso, "%Y-%m-%dT%H:%M:%SZ")
-        return t1_iso if dt1 >= dt2 else t2_iso
+        dt_ct  = datetime.strptime(ct,       "%Y-%m-%dT%H:%M:%SZ")
+        dt_pub = datetime.strptime(pub_time,  "%Y-%m-%dT%H:%M:%SZ")
+        if dt_ct > dt_pub:
+            # [FIX-T1] jövőbeli creationTime → pub_time-ra clampeljük
+            return pub_time
+        return ct
     except Exception:
-        return t1_iso
+        return pub_time
 
 
+# [FIX-S1] Kibővített severity mapping, None-safe
 def get_severity(rec):
-    """priority -> DATEX II severity"""
-    p = rec.get("priority") or 0
-    if p >= 2:
+    p = rec.get("priority")
+    if p is None:
+        return "low"
+    try:
+        p = int(p)
+    except (ValueError, TypeError):
+        return "low"
+    if p >= 3:
         return "highest"
-    elif p == 1:
+    elif p == 2:
         return "high"
+    elif p == 1:
+        return "medium"
     else:
         return "low"
+
+
+# [FIX-V1] validityStatus helyes meghatározása:
+# - Nincs end_date → "active"
+# - Van end_date, esemény még folyamatban → "active" + overallEndTime
+# - "suspended" CSAK akkor, ha az esemény ténylegesen szünetel (külön státusz mező kellene)
+# → a generátorban end_date jelenlétét "active+endTime"-ként kezeljük
+def get_validity_status(rec):
+    return "active"   # end_date-et overallEndTime-ban közöljük, nem suspended-ként
 
 
 def make_output_dir():
@@ -139,15 +181,10 @@ def make_output_dir():
 def build_v23(records, pub_time):
     NS  = "http://datex2.eu/schema/2/2_0"
     XSI = "http://www.w3.org/2001/XMLSchema-instance"
-    nsmap = {
-        None:  NS,
-        "xsi": XSI,
-        "bkk": NS_BKK,
-    }
+    nsmap = {None: NS, "xsi": XSI, "bkk": NS_BKK}
 
     root = etree.Element(
-        f"{{{NS}}}d2LogicalModel",
-        nsmap=nsmap,
+        f"{{{NS}}}d2LogicalModel", nsmap=nsmap,
         attrib={
             "modelBaseVersion": "2",
             f"{{{XSI}}}schemaLocation": (
@@ -157,21 +194,17 @@ def build_v23(records, pub_time):
         },
     )
 
-    # Exchange
     exchange = etree.SubElement(root, f"{{{NS}}}exchange")
     sup = etree.SubElement(exchange, f"{{{NS}}}supplierIdentification")
     etree.SubElement(sup, f"{{{NS}}}country").text = COUNTRY
     etree.SubElement(sup, f"{{{NS}}}nationalIdentifier").text = NATIONAL_IDENTIFIER
     etree.SubElement(exchange, f"{{{NS}}}subscriptionReference").text = PUBLISHER_ID
+    # [FIX-T1] timeDefault = pub_time (= publicationTime)
     etree.SubElement(exchange, f"{{{NS}}}timeDefault").text = pub_time
 
-    # payloadPublication
     pub_el = etree.SubElement(
         root, f"{{{NS}}}payloadPublication",
-        attrib={
-            f"{{{XSI}}}type": f"{{{NS}}}SituationPublication",
-            "lang": "hu",
-        },
+        attrib={f"{{{XSI}}}type": f"{{{NS}}}SituationPublication", "lang": "hu"},
     )
     etree.SubElement(pub_el, f"{{{NS}}}publicationTime").text = pub_time
 
@@ -180,10 +213,10 @@ def build_v23(records, pub_time):
     etree.SubElement(creator, f"{{{NS}}}nationalIdentifier").text = NATIONAL_IDENTIFIER
 
     for rec in records:
-        # creationTime = az esemény keletkezési ideje (API start_date)
-        # versionTime  = publikáció ideje (pub_time)
-        # → creationTime <= versionTime garantált
-        creation_time = format_date(rec.get("start_date")) or pub_time
+        # [FIX-T1] creationTime garantáltan <= pub_time
+        creation_time = safe_creation_time(rec.get("start_date"), pub_time)
+        # [FIX-T2] versionTime = pub_time (legutóbbi publikálás ideje)
+        version_time = pub_time
 
         sit = etree.SubElement(
             pub_el, f"{{{NS}}}situation",
@@ -198,12 +231,9 @@ def build_v23(records, pub_time):
             }
         )
 
-        # Időbélyegek – konzisztens: versionTime >= creationTime garantált
-        version_time = max_time(pub_time, creation_time)
         etree.SubElement(sit_rec, f"{{{NS}}}situationRecordCreationTime").text = creation_time
         etree.SubElement(sit_rec, f"{{{NS}}}situationRecordVersionTime").text  = version_time
 
-        # headerInformation (ajánlott)
         hdr = etree.SubElement(sit_rec, f"{{{NS}}}headerInformation")
         etree.SubElement(hdr, f"{{{NS}}}confidentiality").text   = "noRestriction"
         etree.SubElement(hdr, f"{{{NS}}}informationStatus").text = "real"
@@ -211,23 +241,21 @@ def build_v23(records, pub_time):
         etree.SubElement(sit_rec, f"{{{NS}}}probabilityOfOccurrence").text = "certain"
         etree.SubElement(sit_rec, f"{{{NS}}}severity").text = get_severity(rec)
 
-        # Validity
+        # [FIX-V1] validityStatus: active + overallEndTime (nem suspended)
         validity = etree.SubElement(sit_rec, f"{{{NS}}}validity")
-        etree.SubElement(validity, f"{{{NS}}}validityStatus").text = (
-            "active" if not rec.get("end_date") else "suspended"
-        )
+        etree.SubElement(validity, f"{{{NS}}}validityStatus").text = get_validity_status(rec)
         vp = etree.SubElement(validity, f"{{{NS}}}validityTimeSpecification")
         etree.SubElement(vp, f"{{{NS}}}overallStartTime").text = creation_time
         if rec.get("end_date"):
             etree.SubElement(vp, f"{{{NS}}}overallEndTime").text = format_date(rec["end_date"])
 
-        # accidentType (kötelező Accident-hez)
         etree.SubElement(sit_rec, f"{{{NS}}}accidentType").text = get_accident_type(rec)
 
-        # Lokáció + BKK extension
         for eff in rec.get("effects", []):
             piv = eff.get("pivot", {})
             lat, lon = parse_coordinates(piv.get("coordinates", "[]"))
+            street = piv.get("street", "")
+
             if lat and lon:
                 loc = etree.SubElement(
                     sit_rec, f"{{{NS}}}groupOfLocations",
@@ -236,27 +264,26 @@ def build_v23(records, pub_time):
                 point = etree.SubElement(loc, f"{{{NS}}}locationForDisplay")
                 etree.SubElement(point, f"{{{NS}}}latitude").text  = str(lat)
                 etree.SubElement(point, f"{{{NS}}}longitude").text = str(lon)
-                street = piv.get("street", "")
                 if street:
                     desc = etree.SubElement(sit_rec, f"{{{NS}}}locationDescriptor")
                     etree.SubElement(desc, f"{{{NS}}}value").text = street
 
-            # _extension végű tag = standard DATEX II extensibility mechanizmus
-            ext = etree.SubElement(sit_rec, f"{{{NS}}}situationRecord_extension")
-            bkk = etree.SubElement(ext, f"{{{NS_BKK}}}bkkEffectInfo")
-            etree.SubElement(bkk, f"{{{NS_BKK}}}subRecordId").text = str(piv.get("id", ""))
-            etree.SubElement(bkk, f"{{{NS_BKK}}}changeId").text    = str(piv.get("change_id", rec["id"]))
-            etree.SubElement(bkk, f"{{{NS_BKK}}}effectCode").text  = eff.get("code", "")
-            etree.SubElement(bkk, f"{{{NS_BKK}}}effectName").text  = eff.get("name", "")
-            etree.SubElement(bkk, f"{{{NS_BKK}}}streetName").text  = piv.get("street", "")
-            break  # 1 fő lokáció per record
+            # [FIX-O1] cause ELŐBB, _extension UTÁNA
+            for cause in rec.get("causes", []):
+                cause_elem = etree.SubElement(sit_rec, f"{{{NS}}}cause")
+                # [FIX-C1] csak causeDescription (causeType nem standard 2.x-ben)
+                etree.SubElement(cause_elem, f"{{{NS}}}causeDescription").text = (
+                    cause.get("name") or cause.get("code", "")
+                )
 
-        # Causes
-        for cause in rec.get("causes", []):
-            cause_elem = etree.SubElement(sit_rec, f"{{{NS}}}cause")
-            etree.SubElement(cause_elem, f"{{{NS}}}causeDescription").text = (
-                cause.get("name") or cause.get("code", "")
-            )
+            ext = etree.SubElement(sit_rec, f"{{{NS}}}situationRecord_extension")
+            bkk_ef = etree.SubElement(ext, f"{{{NS_BKK}}}bkkEffectInfo")
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}subRecordId").text = str(piv.get("id", ""))
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}changeId").text    = str(piv.get("change_id", rec["id"]))
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}effectCode").text  = eff.get("code", "")
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}effectName").text  = eff.get("name", "")
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}streetName").text  = street
+            break  # 1 fő lokáció per record
 
     return root
 
@@ -271,17 +298,10 @@ def build_v32(records, pub_time):
     NS_LOC = "http://datex2.eu/schema/3/locationReferencing"
     XSI    = "http://www.w3.org/2001/XMLSchema-instance"
 
-    nsmap = {
-        None:  NS,
-        "sit": NS_SIT,
-        "loc": NS_LOC,
-        "bkk": NS_BKK,
-        "xsi": XSI,
-    }
+    nsmap = {None: NS, "sit": NS_SIT, "loc": NS_LOC, "bkk": NS_BKK, "xsi": XSI}
 
     root = etree.Element(
-        f"{{{NS}}}d2LogicalModel",
-        nsmap=nsmap,
+        f"{{{NS}}}d2LogicalModel", nsmap=nsmap,
         attrib={
             "modelBaseVersion": "3",
             f"{{{XSI}}}schemaLocation": (
@@ -298,10 +318,7 @@ def build_v32(records, pub_time):
 
     pub_el = etree.SubElement(
         root, f"{{{NS}}}payloadPublication",
-        attrib={
-            f"{{{XSI}}}type": f"{{{NS_SIT}}}SituationPublication",
-            "lang": "hu",
-        },
+        attrib={f"{{{XSI}}}type": f"{{{NS_SIT}}}SituationPublication", "lang": "hu"},
     )
     etree.SubElement(pub_el, f"{{{NS}}}publicationTime").text = pub_time
 
@@ -310,14 +327,15 @@ def build_v32(records, pub_time):
     etree.SubElement(creator, f"{{{NS}}}nationalIdentifier").text = NATIONAL_IDENTIFIER
 
     for rec in records:
-        creation_time = format_date(rec.get("start_date")) or pub_time
+        # [FIX-T1] creationTime garantáltan <= pub_time
+        creation_time = safe_creation_time(rec.get("start_date"), pub_time)
+        # [FIX-T2] versionTime = situationVersionTime = pub_time
+        version_time = pub_time
 
         sit = etree.SubElement(
             pub_el, f"{{{NS_SIT}}}situation",
             attrib={"id": f"BKK_SIT_{rec['id']}", "version": "1"},
         )
-        # situationVersionTime = publikáció ideje (>= creation_time)
-        version_time = max_time(pub_time, creation_time)
         etree.SubElement(sit, f"{{{NS_SIT}}}situationVersionTime").text = version_time
 
         sit_rec = etree.SubElement(
@@ -329,31 +347,25 @@ def build_v32(records, pub_time):
             },
         )
 
-        # Időbélyegek
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}creationTime").text = creation_time
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}versionTime").text  = version_time
 
-        # headerInformation
         hdr = etree.SubElement(sit_rec, f"{{{NS_SIT}}}headerInformation")
         etree.SubElement(hdr, f"{{{NS_SIT}}}confidentiality").text   = "noRestriction"
         etree.SubElement(hdr, f"{{{NS_SIT}}}informationStatus").text = "real"
 
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}probabilityOfOccurrence").text = "certain"
 
-        # accidentType
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}accidentType").text = get_accident_type(rec)
 
-        # Validity
+        # [FIX-V1] active + overallEndTime
         validity = etree.SubElement(sit_rec, f"{{{NS_SIT}}}validity")
-        etree.SubElement(validity, f"{{{NS_SIT}}}validityStatus").text = (
-            "active" if not rec.get("end_date") else "suspended"
-        )
+        etree.SubElement(validity, f"{{{NS_SIT}}}validityStatus").text = get_validity_status(rec)
         vts = etree.SubElement(validity, f"{{{NS_SIT}}}validityTimeSpecification")
         etree.SubElement(vts, f"{{{NS}}}overallStartTime").text = creation_time
         if rec.get("end_date"):
             etree.SubElement(vts, f"{{{NS}}}overallEndTime").text = format_date(rec["end_date"])
 
-        # Lokáció + BKK extension
         for eff in rec.get("effects", []):
             piv = eff.get("pivot", {})
             lat, lon = parse_coordinates(piv.get("coordinates", "[]"))
@@ -365,25 +377,26 @@ def build_v32(records, pub_time):
                 )
                 pt    = etree.SubElement(loc, f"{{{NS_LOC}}}point")
                 coord = etree.SubElement(pt,  f"{{{NS_LOC}}}pointByCoordinates")
+                # [FIX-L1] 3.2-ben NINCS loc:pointCoordinates burokelem!
+                # Közvetlenül latitude/longitude a pointByCoordinates alatt
                 etree.SubElement(coord, f"{{{NS_LOC}}}latitude").text  = str(lat)
                 etree.SubElement(coord, f"{{{NS_LOC}}}longitude").text = str(lon)
 
-            # standard _extension mechanizmus
-            ext = etree.SubElement(sit_rec, f"{{{NS_SIT}}}situationRecord_extension")
-            bkk = etree.SubElement(ext, f"{{{NS_BKK}}}bkkEffectInfo")
-            etree.SubElement(bkk, f"{{{NS_BKK}}}subRecordId").text = str(piv.get("id", ""))
-            etree.SubElement(bkk, f"{{{NS_BKK}}}changeId").text    = str(piv.get("change_id", rec["id"]))
-            etree.SubElement(bkk, f"{{{NS_BKK}}}effectCode").text  = eff.get("code", "")
-            etree.SubElement(bkk, f"{{{NS_BKK}}}effectName").text  = eff.get("name", "")
-            etree.SubElement(bkk, f"{{{NS_BKK}}}streetName").text  = piv.get("street", "")
+            # [FIX-O1] cause ELŐBB, _extension UTÁNA
+            for cause in rec.get("causes", []):
+                cause_el = etree.SubElement(sit_rec, f"{{{NS_SIT}}}cause")
+                # [FIX-C1] causeType ELTÁVOLÍTVA - nem standard DATEX II 3.2 elem
+                etree.SubElement(cause_el, f"{{{NS_SIT}}}causeDescription").text = (
+                    cause.get("name") or cause.get("code", "")
+                )
 
-        # Causes
-        for cause in rec.get("causes", []):
-            cause_el = etree.SubElement(sit_rec, f"{{{NS_SIT}}}cause")
-            etree.SubElement(cause_el, f"{{{NS_SIT}}}causeType").text        = cause.get("code", "")
-            etree.SubElement(cause_el, f"{{{NS_SIT}}}causeDescription").text = (
-                cause.get("name") or cause.get("code", "")
-            )
+            ext = etree.SubElement(sit_rec, f"{{{NS_SIT}}}situationRecord_extension")
+            bkk_ef = etree.SubElement(ext, f"{{{NS_BKK}}}bkkEffectInfo")
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}subRecordId").text = str(piv.get("id", ""))
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}changeId").text    = str(piv.get("change_id", rec["id"]))
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}effectCode").text  = eff.get("code", "")
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}effectName").text  = eff.get("name", "")
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}streetName").text  = piv.get("street", "")
 
     return root
 
@@ -399,18 +412,10 @@ def build_v35(records, pub_time):
     NS_ROAD = "http://datex2.eu/schema/3/road"
     XSI     = "http://www.w3.org/2001/XMLSchema-instance"
 
-    nsmap = {
-        None:   NS,
-        "sit":  NS_SIT,
-        "loc":  NS_LOC,
-        "road": NS_ROAD,
-        "bkk":  NS_BKK,
-        "xsi":  XSI,
-    }
+    nsmap = {None: NS, "sit": NS_SIT, "loc": NS_LOC, "road": NS_ROAD, "bkk": NS_BKK, "xsi": XSI}
 
     root = etree.Element(
-        f"{{{NS}}}d2LogicalModel",
-        nsmap=nsmap,
+        f"{{{NS}}}d2LogicalModel", nsmap=nsmap,
         attrib={
             "modelBaseVersion": "3",
             f"{{{XSI}}}schemaLocation": (
@@ -427,10 +432,7 @@ def build_v35(records, pub_time):
 
     pub_el = etree.SubElement(
         root, f"{{{NS}}}payloadPublication",
-        attrib={
-            f"{{{XSI}}}type": f"{{{NS_SIT}}}SituationPublication",
-            "lang": "hu",
-        },
+        attrib={f"{{{XSI}}}type": f"{{{NS_SIT}}}SituationPublication", "lang": "hu"},
     )
     etree.SubElement(pub_el, f"{{{NS}}}publicationTime").text = pub_time
 
@@ -439,14 +441,15 @@ def build_v35(records, pub_time):
     etree.SubElement(creator, f"{{{NS}}}nationalIdentifier").text = NATIONAL_IDENTIFIER
 
     for rec in records:
-        creation_time = format_date(rec.get("start_date")) or pub_time
+        # [FIX-T1] creationTime garantáltan <= pub_time
+        creation_time = safe_creation_time(rec.get("start_date"), pub_time)
+        # [FIX-T2] versionTime = situationVersionTime = pub_time
+        version_time = pub_time
 
         sit = etree.SubElement(
             pub_el, f"{{{NS_SIT}}}situation",
             attrib={"id": f"BKK_SIT_{rec['id']}", "version": "1"},
         )
-        # situationVersionTime = publikáció ideje (>= creation_time)
-        version_time = max_time(pub_time, creation_time)
         etree.SubElement(sit, f"{{{NS_SIT}}}situationVersionTime").text = version_time
         etree.SubElement(sit, f"{{{NS_SIT}}}situationSource").text = PUBLISHER_NAME
 
@@ -459,32 +462,25 @@ def build_v35(records, pub_time):
             },
         )
 
-        # Időbélyegek
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}creationTime").text = creation_time
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}versionTime").text  = version_time
 
-        # headerInformation
         hdr = etree.SubElement(sit_rec, f"{{{NS_SIT}}}headerInformation")
         etree.SubElement(hdr, f"{{{NS_SIT}}}confidentiality").text   = "noRestriction"
         etree.SubElement(hdr, f"{{{NS_SIT}}}informationStatus").text = "real"
 
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}probabilityOfOccurrence").text = "certain"
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}severity").text = get_severity(rec)
-
-        # accidentType
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}accidentType").text = get_accident_type(rec)
 
-        # Validity
+        # [FIX-V1] active + overallEndTime
         validity = etree.SubElement(sit_rec, f"{{{NS_SIT}}}validity")
-        etree.SubElement(validity, f"{{{NS_SIT}}}validityStatus").text = (
-            "active" if not rec.get("end_date") else "suspended"
-        )
+        etree.SubElement(validity, f"{{{NS_SIT}}}validityStatus").text = get_validity_status(rec)
         vts = etree.SubElement(validity, f"{{{NS_SIT}}}validityTimeSpecification")
         etree.SubElement(vts, f"{{{NS}}}overallStartTime").text = creation_time
         if rec.get("end_date"):
             etree.SubElement(vts, f"{{{NS}}}overallEndTime").text = format_date(rec["end_date"])
 
-        # Lokáció + utcanév + BKK extension
         for eff in rec.get("effects", []):
             piv    = eff.get("pivot", {})
             lat, lon = parse_coordinates(piv.get("coordinates", "[]"))
@@ -497,7 +493,8 @@ def build_v35(records, pub_time):
                 )
                 pt    = etree.SubElement(loc, f"{{{NS_LOC}}}point")
                 coord = etree.SubElement(pt,  f"{{{NS_LOC}}}pointByCoordinates")
-                gdc   = etree.SubElement(coord, f"{{{NS_LOC}}}pointCoordinates")
+                # 3.5-ben loc:pointCoordinates burokelem KÖTELEZŐ
+                gdc = etree.SubElement(coord, f"{{{NS_LOC}}}pointCoordinates")
                 etree.SubElement(gdc, f"{{{NS_LOC}}}latitude").text  = str(lat)
                 etree.SubElement(gdc, f"{{{NS_LOC}}}longitude").text = str(lon)
 
@@ -505,22 +502,21 @@ def build_v35(records, pub_time):
                     road_ref = etree.SubElement(loc, f"{{{NS_ROAD}}}roadInformation")
                     etree.SubElement(road_ref, f"{{{NS_ROAD}}}roadName").text = street
 
-            # standard _extension mechanizmus
-            ext = etree.SubElement(sit_rec, f"{{{NS_SIT}}}situationRecord_extension")
-            bkk = etree.SubElement(ext, f"{{{NS_BKK}}}bkkEffectInfo")
-            etree.SubElement(bkk, f"{{{NS_BKK}}}subRecordId").text = str(piv.get("id", ""))
-            etree.SubElement(bkk, f"{{{NS_BKK}}}changeId").text    = str(piv.get("change_id", rec["id"]))
-            etree.SubElement(bkk, f"{{{NS_BKK}}}effectCode").text  = eff.get("code", "")
-            etree.SubElement(bkk, f"{{{NS_BKK}}}effectName").text  = eff.get("name", "")
-            etree.SubElement(bkk, f"{{{NS_BKK}}}streetName").text  = street
+            # [FIX-O1] cause ELŐBB, _extension UTÁNA
+            for cause in rec.get("causes", []):
+                cause_el = etree.SubElement(sit_rec, f"{{{NS_SIT}}}cause")
+                # [FIX-C1] causeType ELTÁVOLÍTVA - nem standard DATEX II 3.5 elem
+                etree.SubElement(cause_el, f"{{{NS_SIT}}}causeDescription").text = (
+                    cause.get("name") or cause.get("code", "")
+                )
 
-        # Causes
-        for cause in rec.get("causes", []):
-            cause_el = etree.SubElement(sit_rec, f"{{{NS_SIT}}}cause")
-            etree.SubElement(cause_el, f"{{{NS_SIT}}}causeType").text        = cause.get("code", "")
-            etree.SubElement(cause_el, f"{{{NS_SIT}}}causeDescription").text = (
-                cause.get("name") or cause.get("code", "")
-            )
+            ext = etree.SubElement(sit_rec, f"{{{NS_SIT}}}situationRecord_extension")
+            bkk_ef = etree.SubElement(ext, f"{{{NS_BKK}}}bkkEffectInfo")
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}subRecordId").text = str(piv.get("id", ""))
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}changeId").text    = str(piv.get("change_id", rec["id"]))
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}effectCode").text  = eff.get("code", "")
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}effectName").text  = eff.get("name", "")
+            etree.SubElement(bkk_ef, f"{{{NS_BKK}}}streetName").text  = street
 
     return root
 
@@ -541,9 +537,7 @@ def save_xml(element, path):
 # ──────────────────────────────────────────────
 
 def main():
-    # Egyetlen pub_time minden fájlhoz és minden rekordhoz – konzisztens
     pub_time = now_iso()
-
     print(f"[{pub_time}] DATEX II XML generálás indul...")
 
     records = fetch_data()
