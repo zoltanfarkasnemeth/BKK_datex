@@ -1,0 +1,48 @@
+name: DATEX II XML Publisher
+
+on:
+  schedule:
+    # Minden 5 percben fut (GitHub minimum: 5 perc)
+    - cron: '*/5 * * * *'
+  # Kézi indítás is lehetséges a GitHub UI-ból
+  workflow_dispatch:
+
+jobs:
+  generate-datex:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # szükséges a git push-hoz
+
+    steps:
+      - name: 📥 Repo checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # teljes history a helyes commit-hoz
+
+      - name: 🐍 Python 3.11 beállítása
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Függőségek telepítése
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🚦 DATEX II XML generálás
+        run: python datex_generator.py
+
+      - name: 📂 Generált fájlok listázása (debug)
+        run: |
+          echo "Létrehozott fájlok:"
+          find Datex_allomanyok -type f | sort
+
+      - name: 💾 Commit és push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Datex_allomanyok/
+          # Ha nincs változás, a commit sikertelen lenne – ezt kezeljük
+          git diff --cached --quiet && echo "Nincs változás, skip." || \
+            git commit -m "🚦 Auto DATEX frissítés: $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
