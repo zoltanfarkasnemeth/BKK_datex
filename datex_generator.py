@@ -104,6 +104,16 @@ def get_accident_type(rec):
     return ACCIDENT_TYPE_DEFAULT
 
 
+def max_time(t1_iso, t2_iso):
+    """Visszaadja a két ISO timestamp közül a késõbbit (versionTime >= creationTime garantáláshoz)"""
+    try:
+        dt1 = datetime.strptime(t1_iso, "%Y-%m-%dT%H:%M:%SZ")
+        dt2 = datetime.strptime(t2_iso, "%Y-%m-%dT%H:%M:%SZ")
+        return t1_iso if dt1 >= dt2 else t2_iso
+    except Exception:
+        return t1_iso
+
+
 def get_severity(rec):
     """priority -> DATEX II severity"""
     p = rec.get("priority") or 0
@@ -188,9 +198,10 @@ def build_v23(records, pub_time):
             }
         )
 
-        # Időbélyegek – konzisztens
+        # Időbélyegek – konzisztens: versionTime >= creationTime garantált
+        version_time = max_time(pub_time, creation_time)
         etree.SubElement(sit_rec, f"{{{NS}}}situationRecordCreationTime").text = creation_time
-        etree.SubElement(sit_rec, f"{{{NS}}}situationRecordVersionTime").text  = pub_time
+        etree.SubElement(sit_rec, f"{{{NS}}}situationRecordVersionTime").text  = version_time
 
         # headerInformation (ajánlott)
         hdr = etree.SubElement(sit_rec, f"{{{NS}}}headerInformation")
@@ -306,7 +317,8 @@ def build_v32(records, pub_time):
             attrib={"id": f"BKK_SIT_{rec['id']}", "version": "1"},
         )
         # situationVersionTime = publikáció ideje (>= creation_time)
-        etree.SubElement(sit, f"{{{NS_SIT}}}situationVersionTime").text = pub_time
+        version_time = max_time(pub_time, creation_time)
+        etree.SubElement(sit, f"{{{NS_SIT}}}situationVersionTime").text = version_time
 
         sit_rec = etree.SubElement(
             sit, f"{{{NS_SIT}}}situationRecord",
@@ -319,7 +331,7 @@ def build_v32(records, pub_time):
 
         # Időbélyegek
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}creationTime").text = creation_time
-        etree.SubElement(sit_rec, f"{{{NS_SIT}}}versionTime").text  = pub_time
+        etree.SubElement(sit_rec, f"{{{NS_SIT}}}versionTime").text  = version_time
 
         # headerInformation
         hdr = etree.SubElement(sit_rec, f"{{{NS_SIT}}}headerInformation")
@@ -434,7 +446,8 @@ def build_v35(records, pub_time):
             attrib={"id": f"BKK_SIT_{rec['id']}", "version": "1"},
         )
         # situationVersionTime = publikáció ideje (>= creation_time)
-        etree.SubElement(sit, f"{{{NS_SIT}}}situationVersionTime").text = pub_time
+        version_time = max_time(pub_time, creation_time)
+        etree.SubElement(sit, f"{{{NS_SIT}}}situationVersionTime").text = version_time
         etree.SubElement(sit, f"{{{NS_SIT}}}situationSource").text = PUBLISHER_NAME
 
         sit_rec = etree.SubElement(
@@ -448,7 +461,7 @@ def build_v35(records, pub_time):
 
         # Időbélyegek
         etree.SubElement(sit_rec, f"{{{NS_SIT}}}creationTime").text = creation_time
-        etree.SubElement(sit_rec, f"{{{NS_SIT}}}versionTime").text  = pub_time
+        etree.SubElement(sit_rec, f"{{{NS_SIT}}}versionTime").text  = version_time
 
         # headerInformation
         hdr = etree.SubElement(sit_rec, f"{{{NS_SIT}}}headerInformation")
