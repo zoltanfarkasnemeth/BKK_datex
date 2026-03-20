@@ -1,0 +1,3281 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<d2LogicalModel xmlns="http://datex2.eu/schema/2/2_0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bkk="http://bkkinfo.hu/datex2/extension/1_0" modelBaseVersion="2" xsi:schemaLocation="http://datex2.eu/schema/2/2_0 http://datex2.eu/schema/2/2_0/DATEXIISchema_2_0.xsd">
+  <exchange>
+    <supplierIdentification>
+      <country>hu</country>
+      <nationalIdentifier>HU</nationalIdentifier>
+    </supplierIdentification>
+    <subscriptionReference>BKK</subscriptionReference>
+    <timeDefault>2026-03-20T02:51:49Z</timeDefault>
+  </exchange>
+  <payloadPublication xsi:type="{http://datex2.eu/schema/2/2_0}SituationPublication" lang="hu">
+    <publicationTime>2026-03-20T02:51:49Z</publicationTime>
+    <publicationCreator>
+      <country>hu</country>
+      <nationalIdentifier>HU</nationalIdentifier>
+    </publicationCreator>
+    <situation id="BKK_SIT_163705" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163705" version="1">
+        <situationRecordCreationTime>2026-03-19T22:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-19T22:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T05:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.47342973019858</latitude>
+            <longitude>19.03491470408392</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Bartók Béla út</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Felújítás</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343269</bkk:subRecordId>
+            <bkk:changeId>163705</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Bartók Béla út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_165003" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_165003" version="1">
+        <situationRecordCreationTime>2026-03-19T10:10:07Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-19T10:10:07Z</overallStartTime>
+            <overallEndTime>2026-03-23T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.514530334588386</latitude>
+            <longitude>19.15275064064529</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Rákosi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>344220</bkk:subRecordId>
+            <bkk:changeId>165003</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Rákosi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_165002" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_165002" version="1">
+        <situationRecordCreationTime>2026-03-19T10:07:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-19T10:07:00Z</overallStartTime>
+            <overallEndTime>2026-03-23T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.478489833653235</latitude>
+            <longitude>19.07381750863839</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Mester utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>344262</bkk:subRecordId>
+            <bkk:changeId>165002</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Mester utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164864" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164864" version="1">
+        <situationRecordCreationTime>2026-03-19T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-19T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-27T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.43044646250676</latitude>
+            <longitude>19.100111601796865</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Zodony utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343676</bkk:subRecordId>
+            <bkk:changeId>164864</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Zodony utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164934" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164934" version="1">
+        <situationRecordCreationTime>2026-03-18T07:31:49Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-18T07:31:49Z</overallStartTime>
+            <overallEndTime>2026-03-23T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.53213204334159</latitude>
+            <longitude>19.113449836414933</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Czobor utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343851</bkk:subRecordId>
+            <bkk:changeId>164934</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Czobor utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164853" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164853" version="1">
+        <situationRecordCreationTime>2026-03-17T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-17T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-06-11T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.546037911782136</latitude>
+            <longitude>19.038528741915492</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Raktár utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343539</bkk:subRecordId>
+            <bkk:changeId>164853</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Raktár utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164780" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164780" version="1">
+        <situationRecordCreationTime>2026-03-16T08:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T08:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T16:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.50858993401147</latitude>
+            <longitude>19.095002910211576</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Thököly út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343182</bkk:subRecordId>
+            <bkk:changeId>164780</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Thököly út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164799" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164799" version="1">
+        <situationRecordCreationTime>2026-03-16T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T07:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T07:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.43625589489488</latitude>
+            <longitude>19.091815612173832</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Csepeli átjáró</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343257</bkk:subRecordId>
+            <bkk:changeId>164799</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Csepeli átjáró</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164697" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164697" version="1">
+        <situationRecordCreationTime>2026-03-16T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T07:00:00Z</overallStartTime>
+            <overallEndTime>2027-03-16T07:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.55544215679111</latitude>
+            <longitude>19.089105025695286</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Pozsonyi utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>344066</bkk:subRecordId>
+            <bkk:changeId>164697</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Pozsonyi utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164378" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164378" version="1">
+        <situationRecordCreationTime>2026-03-16T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-27T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.48451586331016</latitude>
+            <longitude>19.227888363232548</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Pesti út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343812</bkk:subRecordId>
+            <bkk:changeId>164378</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Pesti út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164388" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164388" version="1">
+        <situationRecordCreationTime>2026-03-16T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-28T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.42167743000682</latitude>
+            <longitude>19.009250762249476</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Erzsébet királyné út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341436</bkk:subRecordId>
+            <bkk:changeId>164388</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Erzsébet királyné út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164592" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164592" version="1">
+        <situationRecordCreationTime>2026-03-16T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-23T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.4972528220508</latitude>
+            <longitude>19.034855654484474</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Váralja utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343478</bkk:subRecordId>
+            <bkk:changeId>164592</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Váralja utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164646" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164646" version="1">
+        <situationRecordCreationTime>2026-03-16T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-30T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.559372461747536</latitude>
+            <longitude>19.09238433221447</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Munkásotthon utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>342582</bkk:subRecordId>
+            <bkk:changeId>164646</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Munkásotthon utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164735" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164735" version="1">
+        <situationRecordCreationTime>2026-03-16T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-05-06T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.521504043950955</latitude>
+            <longitude>18.968318809525368</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Árnyas út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343076</bkk:subRecordId>
+            <bkk:changeId>164735</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Árnyas út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164802" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164802" version="1">
+        <situationRecordCreationTime>2026-03-13T11:33:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-13T11:33:00Z</overallStartTime>
+            <overallEndTime>2026-03-23T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.53891679117005</latitude>
+            <longitude>18.96679687661139</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Hűvösvölgyi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>344208</bkk:subRecordId>
+            <bkk:changeId>164802</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Hűvösvölgyi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164793" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164793" version="1">
+        <situationRecordCreationTime>2026-03-13T09:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-13T09:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.51866360403258</latitude>
+            <longitude>19.02815800856692</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Szemlőhegy utca</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Közműépítés</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>344190</bkk:subRecordId>
+            <bkk:changeId>164793</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Szemlőhegy utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164765" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164765" version="1">
+        <situationRecordCreationTime>2026-03-12T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-12T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-05-15T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.453775114788705</latitude>
+            <longitude>19.186552266929453</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Fedezék utca</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Felújítás</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343163</bkk:subRecordId>
+            <bkk:changeId>164765</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Fedezék utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164745" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164745" version="1">
+        <situationRecordCreationTime>2026-03-12T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-12T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-23T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.55036299617852</latitude>
+            <longitude>18.95068784310324</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Máriaremetei út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343826</bkk:subRecordId>
+            <bkk:changeId>164745</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Máriaremetei út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164532" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164532" version="1">
+        <situationRecordCreationTime>2026-03-11T08:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-11T08:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-31T09:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.45926103460385</latitude>
+            <longitude>19.234949163564643</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Rákóczi Ferenc utca</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Közműépítés</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>342243</bkk:subRecordId>
+            <bkk:changeId>164532</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Rákóczi Ferenc utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_163979" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163979" version="1">
+        <situationRecordCreationTime>2026-03-11T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-11T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.45147606683627</latitude>
+            <longitude>19.033246648623635</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Tétényi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343905</bkk:subRecordId>
+            <bkk:changeId>163979</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Tétényi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164499" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164499" version="1">
+        <situationRecordCreationTime>2026-03-06T08:19:17Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-06T08:19:17Z</overallStartTime>
+            <overallEndTime>2026-04-24T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.430994866213595</latitude>
+            <longitude>19.1952963131577</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Gyékény tér</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341847</bkk:subRecordId>
+            <bkk:changeId>164499</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Gyékény tér</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164390" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164390" version="1">
+        <situationRecordCreationTime>2026-03-03T15:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-03T15:00:00Z</overallStartTime>
+            <overallEndTime>2027-02-26T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.48329534087669</latitude>
+            <longitude>19.052907580972807</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Bartók Béla út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341438</bkk:subRecordId>
+            <bkk:changeId>164390</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Bartók Béla út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164046" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164046" version="1">
+        <situationRecordCreationTime>2026-03-03T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-03T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-31T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.545692999359076</latitude>
+            <longitude>19.036201831502304</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Hunor utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341079</bkk:subRecordId>
+            <bkk:changeId>164046</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Hunor utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164322" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164322" version="1">
+        <situationRecordCreationTime>2026-03-02T09:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-02T09:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.47109322970879</latitude>
+            <longitude>19.109650315935106</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Ecseri út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343902</bkk:subRecordId>
+            <bkk:changeId>164322</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Ecseri út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164150" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164150" version="1">
+        <situationRecordCreationTime>2026-03-02T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-02T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.46941106994748</latitude>
+            <longitude>19.027690990547203</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Ballagi Mór utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343740</bkk:subRecordId>
+            <bkk:changeId>164150</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Ballagi Mór utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_163943" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163943" version="1">
+        <situationRecordCreationTime>2026-02-25T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-02-25T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-05-27T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.529676716013675</latitude>
+            <longitude>19.074267814544488</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Hajdú utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>340286</bkk:subRecordId>
+            <bkk:changeId>163943</bkk:changeId>
+            <bkk:effectCode>egyiranyu</bkk:effectCode>
+            <bkk:effectName>One-way traffic</bkk:effectName>
+            <bkk:streetName>Hajdú utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_163914" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163914" version="1">
+        <situationRecordCreationTime>2026-02-18T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-02-18T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-05-15T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.50891819131768</latitude>
+            <longitude>19.059346483743123</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Szobi utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>340176</bkk:subRecordId>
+            <bkk:changeId>163914</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Szobi utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_163869" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163869" version="1">
+        <situationRecordCreationTime>2026-02-17T12:50:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-02-17T12:50:00Z</overallStartTime>
+            <overallEndTime>2026-03-23T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.49083874015263</latitude>
+            <longitude>19.086337892304837</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Lujza utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343113</bkk:subRecordId>
+            <bkk:changeId>163869</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Lujza utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_162775" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_162775" version="1">
+        <situationRecordCreationTime>2026-01-19T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-01-19T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.48359505303836</latitude>
+            <longitude>19.085532768759418</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Korányi Sándor utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>339523</bkk:subRecordId>
+            <bkk:changeId>162775</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Korányi Sándor utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_161813" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_161813" version="1">
+        <situationRecordCreationTime>2025-12-08T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-12-08T06:00:00Z</overallStartTime>
+            <overallEndTime>2027-05-03T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.496885833523706</latitude>
+            <longitude>19.067157957395956</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Dohány utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>334901</bkk:subRecordId>
+            <bkk:changeId>161813</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Dohány utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_159769" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_159769" version="1">
+        <situationRecordCreationTime>2025-10-15T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-10-15T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-27T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.50006422349992</latitude>
+            <longitude>19.060102966019876</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Kazinczy utca</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Felújítás</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341253</bkk:subRecordId>
+            <bkk:changeId>159769</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Kazinczy utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_154501" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_154501" version="1">
+        <situationRecordCreationTime>2025-05-27T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-05-27T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-08-30T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.49743143280413</latitude>
+            <longitude>19.14078576335746</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Gyógyszergyári utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343718</bkk:subRecordId>
+            <bkk:changeId>154501</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Gyógyszergyári utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_149645" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_149645" version="1">
+        <situationRecordCreationTime>2025-03-01T04:15:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-03-01T04:15:00Z</overallStartTime>
+            <overallEndTime>2026-09-09T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.54045226880964</latitude>
+            <longitude>19.040832283597073</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Pacsirtamező utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343440</bkk:subRecordId>
+            <bkk:changeId>149645</bkk:changeId>
+            <bkk:effectCode>forgrend</bkk:effectCode>
+            <bkk:effectName>Change of traffic order</bkk:effectName>
+            <bkk:streetName>Pacsirtamező utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_139303" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_139303" version="1">
+        <situationRecordCreationTime>2024-04-26T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>highest</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2024-04-26T07:00:00Z</overallStartTime>
+            <overallEndTime>2027-12-31T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.47126055382987</latitude>
+            <longitude>19.04527631424419</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Fehérvári út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>335420</bkk:subRecordId>
+            <bkk:changeId>139303</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Fehérvári út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164709" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164709" version="1">
+        <situationRecordCreationTime>2026-03-19T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-19T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-27T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.49234813399837</latitude>
+            <longitude>19.059154667457474</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Ferenczy István utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>342789</bkk:subRecordId>
+            <bkk:changeId>164709</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Ferenczy István utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164957" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164957" version="1">
+        <situationRecordCreationTime>2026-03-18T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-18T07:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.40142109859473</latitude>
+            <longitude>19.08759712433514</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Szentmiklósi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343898</bkk:subRecordId>
+            <bkk:changeId>164957</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Szentmiklósi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164960" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164960" version="1">
+        <situationRecordCreationTime>2026-03-18T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-18T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.495591626940566</latitude>
+            <longitude>19.056548875705527</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Gerlóczy utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343901</bkk:subRecordId>
+            <bkk:changeId>164960</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Gerlóczy utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164888" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164888" version="1">
+        <situationRecordCreationTime>2026-03-17T10:16:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-17T10:16:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.365815233481676</latitude>
+            <longitude>19.146946883677728</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Európai utak 75</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343781</bkk:subRecordId>
+            <bkk:changeId>164888</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Európai utak 75</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164742" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164742" version="1">
+        <situationRecordCreationTime>2026-03-17T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-17T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-31T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.44760863962209</latitude>
+            <longitude>19.214400090543897</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Igló utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343086</bkk:subRecordId>
+            <bkk:changeId>164742</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Igló utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164856" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164856" version="1">
+        <situationRecordCreationTime>2026-03-16T11:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T11:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-25T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.59675766301672</latitude>
+            <longitude>19.064546937258385</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Juhász Gyula utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343655</bkk:subRecordId>
+            <bkk:changeId>164856</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Juhász Gyula utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164844" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164844" version="1">
+        <situationRecordCreationTime>2026-03-16T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T07:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.42634458260217</latitude>
+            <longitude>19.03945083245127</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Kossuth Lajos utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343734</bkk:subRecordId>
+            <bkk:changeId>164844</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Kossuth Lajos utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_163884" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163884" version="1">
+        <situationRecordCreationTime>2026-03-16T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.54987007704212</latitude>
+            <longitude>19.126397292261395</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Pöltenberg Ernő utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>342464</bkk:subRecordId>
+            <bkk:changeId>163884</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Pöltenberg Ernő utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_163429" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163429" version="1">
+        <situationRecordCreationTime>2026-03-16T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-27T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.53230220050257</latitude>
+            <longitude>19.123802927511495</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Rákospalotai körvasút sor</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343112</bkk:subRecordId>
+            <bkk:changeId>163429</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Rákospalotai körvasút sor</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_162997" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_162997" version="1">
+        <situationRecordCreationTime>2026-03-16T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-27T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.46415397308464</latitude>
+            <longitude>19.29805985535058</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Gyöngyfüzér utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343110</bkk:subRecordId>
+            <bkk:changeId>162997</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Gyöngyfüzér utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164702" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164702" version="1">
+        <situationRecordCreationTime>2026-03-16T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.48183557189751</latitude>
+            <longitude>19.046488840614845</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Kelenhegyi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343731</bkk:subRecordId>
+            <bkk:changeId>164702</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Kelenhegyi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164714" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164714" version="1">
+        <situationRecordCreationTime>2026-03-16T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-16T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-10T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.51448484879131</latitude>
+            <longitude>19.117089261408985</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Kaffka Margit utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>342794</bkk:subRecordId>
+            <bkk:changeId>164714</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Kaffka Margit utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164717" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164717" version="1">
+        <situationRecordCreationTime>2026-03-13T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-13T07:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-09T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.43688012836164</latitude>
+            <longitude>19.01409679632009</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Hittérítő út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>342797</bkk:subRecordId>
+            <bkk:changeId>164717</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Hittérítő út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164582" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164582" version="1">
+        <situationRecordCreationTime>2026-03-11T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-11T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-29T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.38317243267998</latitude>
+            <longitude>18.957274806142994</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Nagytétényi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343071</bkk:subRecordId>
+            <bkk:changeId>164582</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Nagytétényi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164675" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164675" version="1">
+        <situationRecordCreationTime>2026-03-11T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-11T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-31T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.51014756006769</latitude>
+            <longitude>19.10348482570562</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Mexikói út</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Közműépítés</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>342701</bkk:subRecordId>
+            <bkk:changeId>164675</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Mexikói út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164625" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164625" version="1">
+        <situationRecordCreationTime>2026-03-10T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-10T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-20T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.52564028074045</latitude>
+            <longitude>19.094954116155492</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Szőnyi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>344202</bkk:subRecordId>
+            <bkk:changeId>164625</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Szőnyi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164081" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164081" version="1">
+        <situationRecordCreationTime>2026-03-09T08:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-09T08:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-31T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.431057507750694</latitude>
+            <longitude>19.195604997010868</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Gyékény tér</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>340616</bkk:subRecordId>
+            <bkk:changeId>164081</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Gyékény tér</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164565" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164565" version="1">
+        <situationRecordCreationTime>2026-03-09T08:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-09T08:00:00Z</overallStartTime>
+            <overallEndTime>2026-05-29T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.5425315999215</latitude>
+            <longitude>19.09480364504474</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Szent László út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>342129</bkk:subRecordId>
+            <bkk:changeId>164565</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Szent László út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164400" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164400" version="1">
+        <situationRecordCreationTime>2026-03-09T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-09T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-06T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.53786442307269</latitude>
+            <longitude>19.064192263453677</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Jakab József utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341514</bkk:subRecordId>
+            <bkk:changeId>164400</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Jakab József utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_164409" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_164409" version="1">
+        <situationRecordCreationTime>2026-03-09T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-03-09T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-06T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.550400852244216</latitude>
+            <longitude>19.083374770216416</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Pajtás utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341526</bkk:subRecordId>
+            <bkk:changeId>164409</bkk:changeId>
+            <bkk:effectCode>valtakozo</bkk:effectCode>
+            <bkk:effectName>Alternating traffic</bkk:effectName>
+            <bkk:streetName>Pajtás utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_163922" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163922" version="1">
+        <situationRecordCreationTime>2026-02-23T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-02-23T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-27T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.43905416029567</latitude>
+            <longitude>19.106281358952828</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Szent Erzsébet tér</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>340437</bkk:subRecordId>
+            <bkk:changeId>163922</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Szent Erzsébet tér</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_163249" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163249" version="1">
+        <situationRecordCreationTime>2026-02-02T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-02-02T07:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-27T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.46036531758701</latitude>
+            <longitude>19.149705727746973</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Bethlen Gábor utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341115</bkk:subRecordId>
+            <bkk:changeId>163249</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Bethlen Gábor utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_163150" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163150" version="1">
+        <situationRecordCreationTime>2026-02-02T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-02-02T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-06-01T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.463871451746755</latitude>
+            <longitude>19.23257763808911</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Vörösmarty utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>342011</bkk:subRecordId>
+            <bkk:changeId>163150</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Vörösmarty utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_163147" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_163147" version="1">
+        <situationRecordCreationTime>2026-02-02T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-02-02T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-06-01T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.47594401773905</latitude>
+            <longitude>19.259393192562886</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Ágas utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>338600</bkk:subRecordId>
+            <bkk:changeId>163147</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Ágas utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_162868" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_162868" version="1">
+        <situationRecordCreationTime>2026-01-19T09:44:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-01-19T09:44:00Z</overallStartTime>
+            <overallEndTime>2026-04-10T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.46156463163381</latitude>
+            <longitude>19.125560046321407</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Pannónia utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341529</bkk:subRecordId>
+            <bkk:changeId>162868</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Pannónia utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_162136" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_162136" version="1">
+        <situationRecordCreationTime>2026-01-06T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-01-06T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-25T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.510868398049695</latitude>
+            <longitude>19.06992288737171</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Aradi utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>344214</bkk:subRecordId>
+            <bkk:changeId>162136</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Aradi utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_156040" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_156040" version="1">
+        <situationRecordCreationTime>2026-01-05T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2026-01-05T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-22T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.4772990610712</latitude>
+            <longitude>19.080018033108136</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Sobieski János utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>335749</bkk:subRecordId>
+            <bkk:changeId>156040</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Sobieski János utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_160885" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_160885" version="1">
+        <situationRecordCreationTime>2025-11-10T09:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-11-10T09:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-26T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.54848144038814</latitude>
+            <longitude>19.072868771980556</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Meder utca</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Felújítás</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>340800</bkk:subRecordId>
+            <bkk:changeId>160885</bkk:changeId>
+            <bkk:effectCode>egyiranyu</bkk:effectCode>
+            <bkk:effectName>One-way traffic</bkk:effectName>
+            <bkk:streetName>Meder utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_159413" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_159413" version="1">
+        <situationRecordCreationTime>2025-10-01T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-10-01T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-06-01T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.52376774617051</latitude>
+            <longitude>19.064350782684166</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Dózsa György út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341094</bkk:subRecordId>
+            <bkk:changeId>159413</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Dózsa György út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_159284" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_159284" version="1">
+        <situationRecordCreationTime>2025-09-30T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-09-30T07:00:00Z</overallStartTime>
+            <overallEndTime>2026-09-30T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.50428113840425</latitude>
+            <longitude>19.047280125622922</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Zoltán utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>326183</bkk:subRecordId>
+            <bkk:changeId>159284</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Zoltán utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_158785" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_158785" version="1">
+        <situationRecordCreationTime>2025-09-17T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-09-17T06:00:00Z</overallStartTime>
+            <overallEndTime>2027-12-15T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.46995450793254</latitude>
+            <longitude>19.050101485863852</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Dombóvári út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>340476</bkk:subRecordId>
+            <bkk:changeId>158785</bkk:changeId>
+            <bkk:effectCode>egyiranyu</bkk:effectCode>
+            <bkk:effectName>One-way traffic</bkk:effectName>
+            <bkk:streetName>Dombóvári út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_156188" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_156188" version="1">
+        <situationRecordCreationTime>2025-07-14T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-07-14T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-06-30T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.54520708016754</latitude>
+            <longitude>19.07162607955198</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Váci út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>342557</bkk:subRecordId>
+            <bkk:changeId>156188</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Váci út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_156340" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_156340" version="1">
+        <situationRecordCreationTime>2025-07-09T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-07-09T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-01T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.56281315791358</latitude>
+            <longitude>18.962815116960094</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Községház utca</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Felújítás</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>335033</bkk:subRecordId>
+            <bkk:changeId>156340</bkk:changeId>
+            <bkk:effectCode>forgrend</bkk:effectCode>
+            <bkk:effectName>Change of traffic order</bkk:effectName>
+            <bkk:streetName>Községház utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_154607" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_154607" version="1">
+        <situationRecordCreationTime>2025-05-23T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-05-23T06:00:00Z</overallStartTime>
+            <overallEndTime>2027-04-16T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.48088919847475</latitude>
+            <longitude>19.07712362774747</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Thaly Kálmán utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>309824</bkk:subRecordId>
+            <bkk:changeId>154607</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Thaly Kálmán utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_152510" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_152510" version="1">
+        <situationRecordCreationTime>2025-04-02T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-04-02T07:00:00Z</overallStartTime>
+            <overallEndTime>2026-09-23T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.48978520790086</latitude>
+            <longitude>19.066282149769023</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Reviczky utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>331040</bkk:subRecordId>
+            <bkk:changeId>152510</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Reviczky utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_150721" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_150721" version="1">
+        <situationRecordCreationTime>2025-03-03T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-03-03T06:00:00Z</overallStartTime>
+            <overallEndTime>2027-01-06T10:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.487243399459004</latitude>
+            <longitude>19.0900122879991</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Kőris utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>341112</bkk:subRecordId>
+            <bkk:changeId>150721</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Kőris utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_150676" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_150676" version="1">
+        <situationRecordCreationTime>2025-02-20T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-02-20T06:00:00Z</overallStartTime>
+            <overallEndTime>2027-06-04T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.50589304895335</latitude>
+            <longitude>19.066079640079224</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Hunyadi tér</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>323872</bkk:subRecordId>
+            <bkk:changeId>150676</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Hunyadi tér</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_150050" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_150050" version="1">
+        <situationRecordCreationTime>2025-02-10T00:01:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-02-10T00:01:00Z</overallStartTime>
+            <overallEndTime>2026-04-29T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.52483424632229</latitude>
+            <longitude>19.082128678971028</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Mór utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>339987</bkk:subRecordId>
+            <bkk:changeId>150050</bkk:changeId>
+            <bkk:effectCode>utszukulet</bkk:effectCode>
+            <bkk:effectName>Narrow road</bkk:effectName>
+            <bkk:streetName>Mór utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_149528" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_149528" version="1">
+        <situationRecordCreationTime>2025-01-27T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2025-01-27T06:00:00Z</overallStartTime>
+            <overallEndTime>2027-12-01T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.5332487163895</latitude>
+            <longitude>19.065511607357596</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Esztergomi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343931</bkk:subRecordId>
+            <bkk:changeId>149528</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Esztergomi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_146250" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_146250" version="1">
+        <situationRecordCreationTime>2024-10-21T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2024-10-21T07:00:00Z</overallStartTime>
+            <overallEndTime>2027-12-15T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.4731858103934</latitude>
+            <longitude>19.034062764905187</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Bartók Béla út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>343910</bkk:subRecordId>
+            <bkk:changeId>146250</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Bartók Béla út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_145393" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_145393" version="1">
+        <situationRecordCreationTime>2024-10-07T04:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2024-10-07T04:00:00Z</overallStartTime>
+            <overallEndTime>2026-12-31T23:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.46782077275222</latitude>
+            <longitude>19.076369345825437</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Összekötő út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>335972</bkk:subRecordId>
+            <bkk:changeId>145393</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Összekötő út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_139606" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_139606" version="1">
+        <situationRecordCreationTime>2024-05-21T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2024-05-21T06:00:00Z</overallStartTime>
+            <overallEndTime>2027-12-15T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.468072596270474</latitude>
+            <longitude>19.073895845822673</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Laczkovich utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>335753</bkk:subRecordId>
+            <bkk:changeId>139606</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Laczkovich utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_139360" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_139360" version="1">
+        <situationRecordCreationTime>2024-04-16T09:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2024-04-16T09:00:00Z</overallStartTime>
+            <overallEndTime>2027-12-30T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.47026560084731</latitude>
+            <longitude>19.05167655571952</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Hamzsabégi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>340164</bkk:subRecordId>
+            <bkk:changeId>139360</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Hamzsabégi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_138874" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_138874" version="1">
+        <situationRecordCreationTime>2024-04-13T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2024-04-13T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-05-29T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.470295610128794</latitude>
+            <longitude>19.053130105712775</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Budafoki út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>322724</bkk:subRecordId>
+            <bkk:changeId>138874</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Budafoki út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_138433" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_138433" version="1">
+        <situationRecordCreationTime>2024-03-04T07:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2024-03-04T07:00:00Z</overallStartTime>
+            <overallEndTime>2027-12-31T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.4709086398503</latitude>
+            <longitude>19.04505022419523</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Sárbogárdi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>337538</bkk:subRecordId>
+            <bkk:changeId>138433</bkk:changeId>
+            <bkk:effectCode>egyiranyu</bkk:effectCode>
+            <bkk:effectName>One-way traffic</bkk:effectName>
+            <bkk:streetName>Sárbogárdi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_136274" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_136274" version="1">
+        <situationRecordCreationTime>2023-11-09T15:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2023-11-09T15:00:00Z</overallStartTime>
+            <overallEndTime>2026-10-05T23:59:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.46810492187304</latitude>
+            <longitude>19.079578870325363</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Gubacsi út</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>337970</bkk:subRecordId>
+            <bkk:changeId>136274</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Gubacsi út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_135341" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_135341" version="1">
+        <situationRecordCreationTime>2023-09-25T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2023-09-25T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-08-31T23:55:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.50593590947404</latitude>
+            <longitude>19.0490767800707</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Kálmán Imre utca</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>322645</bkk:subRecordId>
+            <bkk:changeId>135341</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Kálmán Imre utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_132134" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_132134" version="1">
+        <situationRecordCreationTime>2023-04-19T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2023-04-19T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-06T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.536570774100966</latitude>
+            <longitude>19.068709325358423</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Frangepán utca</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Közműépítés</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>344223</bkk:subRecordId>
+            <bkk:changeId>132134</bkk:changeId>
+            <bkk:effectCode>egyiranyu</bkk:effectCode>
+            <bkk:effectName>One-way traffic</bkk:effectName>
+            <bkk:streetName>Frangepán utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_130913" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_130913" version="1">
+        <situationRecordCreationTime>2023-03-03T20:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2023-03-03T20:00:00Z</overallStartTime>
+            <overallEndTime>2027-03-12T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.474740600519084</latitude>
+            <longitude>19.10095078943352</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Üllői út</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Felújítás</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>337823</bkk:subRecordId>
+            <bkk:changeId>130913</bkk:changeId>
+            <bkk:effectCode>savlezaras</bkk:effectCode>
+            <bkk:effectName>Lane closure</bkk:effectName>
+            <bkk:streetName>Üllői út</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_118650" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_118650" version="1">
+        <situationRecordCreationTime>2021-08-27T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2021-08-27T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-04-27T18:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.49028157278478</latitude>
+            <longitude>19.064239396998815</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Múzeum utca</value>
+        </locationDescriptor>
+        <cause>
+          <causeDescription>Közműépítés</causeDescription>
+        </cause>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>336550</bkk:subRecordId>
+            <bkk:changeId>118650</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Múzeum utca</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+    <situation id="BKK_SIT_116148" version="1">
+      <situationRecord xsi:type="{http://datex2.eu/schema/2/2_0}Accident" id="BKK_REC_116148" version="1">
+        <situationRecordCreationTime>2021-04-15T06:00:00Z</situationRecordCreationTime>
+        <situationRecordVersionTime>2026-03-20T02:51:49Z</situationRecordVersionTime>
+        <headerInformation>
+          <confidentiality>noRestriction</confidentiality>
+          <informationStatus>real</informationStatus>
+        </headerInformation>
+        <probabilityOfOccurrence>certain</probabilityOfOccurrence>
+        <severity>low</severity>
+        <validity>
+          <validityStatus>active</validityStatus>
+          <validityTimeSpecification>
+            <overallStartTime>2021-04-15T06:00:00Z</overallStartTime>
+            <overallEndTime>2026-03-31T20:00:00Z</overallEndTime>
+          </validityTimeSpecification>
+        </validity>
+        <accidentType>accident</accidentType>
+        <groupOfLocations xsi:type="{http://datex2.eu/schema/2/2_0}Point">
+          <locationForDisplay>
+            <latitude>47.486982</latitude>
+            <longitude>19.0427747</longitude>
+          </locationForDisplay>
+        </groupOfLocations>
+        <locationDescriptor>
+          <value>Citadella sétány</value>
+        </locationDescriptor>
+        <situationRecord_extension>
+          <bkk:bkkEffectInfo>
+            <bkk:subRecordId>340676</bkk:subRecordId>
+            <bkk:changeId>116148</bkk:changeId>
+            <bkk:effectCode>lezaras</bkk:effectCode>
+            <bkk:effectName>Closure</bkk:effectName>
+            <bkk:streetName>Citadella sétány</bkk:streetName>
+          </bkk:bkkEffectInfo>
+        </situationRecord_extension>
+      </situationRecord>
+    </situation>
+  </payloadPublication>
+</d2LogicalModel>
